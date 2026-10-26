@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#146c5a">
+    <title>ISPA-PAY</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true">I</div>
+        <div>
+          <p class="eyebrow">Votre portefeuille</p>
+          <h1>ISPA-PAY</h1>
+        </div>
+      </header>
+
+      <section class="balance-card" aria-labelledby="balance-title">
+        <p id="balance-title">Solde disponible</p>
+        <p class="balance-amount"><span id="balance">1 000</span><span class="currency">F</span></p>
+        <p class="balance-note">Prêt pour votre prochain trajet</p>
+      </section>
+
+      <section class="payments" aria-labelledby="payments-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Transport</p>
+            <h2 id="payments-title">Payer un gbaka</h2>
+          </div>
+          <span class="ride-icon" aria-hidden="true">↗</span>
+        </div>
+        <div class="payment-options">
+          <button class="payment-button" type="button" data-amount="300">
+            <span class="button-label">Trajet standard</span>
+            <span class="button-price">300 F</span>
+          </button>
+          <button class="payment-button" type="button" data-amount="500">
+            <span class="button-label">Trajet longue distance</span>
+            <span class="button-price">500 F</span>
+          </button>
+        </div>
+        <button class="recharge-button" id="recharge" type="button">
+          <span class="plus" aria-hidden="true">＋</span>
+          Recharger +1 000 F
+        </button>
+        <p class="status-message" id="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="history" aria-labelledby="history-title">
+        <div class="section-heading history-heading">
+          <div>
+            <p class="eyebrow">Vos dernières opérations</p>
+            <h2 id="history-title">Historique</h2>
+          </div>
+        </div>
+        <ul class="history-list" id="history-list" aria-live="polite">
+          <li class="empty-state">Vos opérations apparaîtront ici.</li>
+        </ul>
+      </section>
+      <footer>Simple, rapide, ISPA-PAY.</footer>
+    </main>
+  </body>
+</html>
